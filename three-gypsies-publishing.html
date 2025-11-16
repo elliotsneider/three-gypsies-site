@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Three Gypsies Publishing</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <style>
+    :root {
+      --bg: #f7f3ec;
+      --fg: #222222;
+      --accent: #7b4b94;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      font-family: -apple-system, system-ui, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      background: var(--bg);
+      color: var(--fg);
+      display: flex;
+      min-height: 100vh;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .wrapper {
+      max-width: 680px;
+      padding: 2.5rem 1.75rem;
+      background: #ffffff;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+      border-radius: 18px;
+      text-align: center;
+    }
+
+    h1 {
+      font-size: 1.9rem;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      margin: 0 0 0.75rem;
+    }
+
+    .tagline {
+      font-size: 0.95rem;
+      text-transform: uppercase;
+      letter-spacing: 0.18em;
+      color: #666;
+      margin-bottom: 1.6rem;
+    }
+
+    p {
+      line-height: 1.6;
+      margin: 0 0 1.4rem;
+    }
+
+    .links {
+      display: flex;
+      flex-direction: column;
+      gap: 0.6rem;
+      margin-top: 1.4rem;
+    }
+
+    .links a {
+      text-decoration: none;
+      padding: 0.8rem 1rem;
+      border-radius: 999px;
+      border: 1px solid rgba(0,0,0,0.12);
+      transition: background 0.15s ease, transform 0.05s ease, box-shadow 0.15s ease;
+      font-size: 0.95rem;
+    }
+
+    .links a.primary {
+      background: var(--accent);
+      color: #fff;
+      border-color: transparent;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.12);
+    }
+
+    .links a.primary:hover {
+      transform: translateY(-1px);
+      box-shadow: 0 6px 18px rgba(0,0,0,0.16);
+    }
+
+    .links a.secondary {
+      background: #faf7f2;
+      color: #333;
+    }
+
+    .links a.secondary:hover {
+      background: #f0ebe3;
+    }
+
+    footer {
+      margin-top: 2rem;
+      font-size: 0.8rem;
+      color: #888;
+    }
+
+    @media (min-width: 640px) {
+      .links {
+        flex-direction: row;
+        justify-content: center;
+      }
+
+      .links a {
+        min-width: 210px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="wrapper">
+    <img src="3gypsies3.png" alt="Three Gypsies Publishing logo" style="max-width: 160px; margin: 1rem auto; display: block;" />
+<h1>Three Gypsies Publishing</h1>
+    <div class="tagline">Poetry · Prose · Memory</div>
+
+    <p>
+      Three Gypsies Publishing is an independent imprint devoted to works that
+      live at the crossroads of poetry, memoir, and reflection. We honor the
+      practice of remembering, and the small, precise language that grows from it.
+    </p>
+
+    <p>
+      Our first title invites readers to sit with grief, curiosity, and the
+      everyday work of learning to walk again.
+    </p>
+
+    <div class="links">
+      <!-- TODO: replace the # with the actual URL to your book -->
+      <a class="primary" href="#" target="_blank" rel="noopener noreferrer">
+        Read “Don’t Borrow Trouble”
+      </a>
+
+      <!-- TODO: replace the # with the actual URL to your Merciful TRVLR site or link hub -->
+      <a class="secondary" href="https://mercifultrvlr.hearnow.com/" target="_blank" rel="noopener noreferrer">
+        Visit Merciful TRVLR
+      </a>
+    </div>
+
+    <footer>
+      &copy; Three Gypsies Publishing, 2025
+    </footer>
+  </div>
+</body>
+</html>
