@@ -14,164 +14,8 @@
   <!-- If your logo is publicly accessible, you can set og:image later -->
   <!-- <meta property="og:image" content="https://threegypsiespublishing.com/3gypsiestransparent_store.png" /> -->
 
-  <style>
-    :root{
-      --bg: #f7f6f2;
-      --ink: #1a1a1a;
-      --muted: #5f5f5f;
-      --card: rgba(255,255,255,.65);
-      --border: rgba(26,26,26,.18);
-      --shadow: 0 10px 30px rgba(0,0,0,.06);
-      --radius: 18px;
-    }
+  <link rel="stylesheet" href="styles.css">
 
-    * { box-sizing: border-box; }
-
-    body{
-      margin:0;
-      font-family: Georgia, "Times New Roman", serif;
-      background:
-        radial-gradient(1200px 600px at 50% -120px, rgba(26,26,26,.06), transparent 60%),
-        var(--bg);
-      color: var(--ink);
-      text-align: center;
-      -webkit-font-smoothing: antialiased;
-      -moz-osx-font-smoothing: grayscale;
-    }
-
-    .container{
-      max-width: 820px;
-      margin: 0 auto;
-      padding: 56px 18px 44px;
-    }
-
-    .card{
-      background: var(--card);
-      border: 1px solid var(--border);
-      border-radius: var(--radius);
-      box-shadow: var(--shadow);
-      padding: 34px 18px 26px;
-      backdrop-filter: blur(6px);
-    }
-
-    header{
-      display:flex;
-      flex-direction: column;
-      align-items: center;
-      gap: 12px;
-      margin-bottom: 18px;
-    }
-
-    img.logo{
-      width: min(280px, 70vw);
-      height: auto;
-      margin: 0;
-      display:block;
-    }
-
-    .tagline{
-      max-width: 58ch;
-      margin: 8px auto 0;
-      font-size: 1.06rem;
-      line-height: 1.65;
-      color: var(--muted);
-    }
-
-    .links{
-      display:flex;
-      flex-direction: column;
-      gap: 14px;
-      margin: 26px auto 0;
-      max-width: 520px;
-    }
-
-    a.button{
-      display:flex;
-      align-items:center;
-      justify-content: space-between;
-      gap: 14px;
-
-      text-decoration:none;
-      border: 1px solid var(--border);
-      border-radius: 14px;
-      padding: 14px 16px;
-      font-size: 1rem;
-      color: var(--ink);
-      background: rgba(247,246,242,.55);
-      transition: transform .12s ease, background .12s ease, border-color .12s ease;
-    }
-
-    a.button:hover{
-      transform: translateY(-1px);
-      background: rgba(26,26,26,.06);
-      border-color: rgba(26,26,26,.30);
-    }
-
-    a.button:focus{
-      outline: 3px solid rgba(26,26,26,.25);
-      outline-offset: 3px;
-    }
-
-    .hint{
-      font-size: .92rem;
-      color: var(--muted);
-      opacity: .9;
-      white-space: nowrap;
-    }
-
-    section{
-      margin-top: 28px;
-      text-align: left;
-      max-width: 680px;
-      margin-left: auto;
-      margin-right: auto;
-      padding: 0 6px;
-    }
-
-    h2{
-      font-size: 1.06rem;
-      letter-spacing: .02em;
-      margin: 22px 0 10px;
-      text-transform: uppercase;
-      color: var(--ink);
-    }
-
-    p{
-      margin: 0 0 12px;
-      line-height: 1.7;
-      color: var(--muted);
-      font-size: 1rem;
-    }
-
-    .fineprint{
-      margin-top: 22px;
-      font-size: .88rem;
-      color: var(--muted);
-    }
-
-    footer{
-      margin-top: 16px;
-      font-size: 0.85rem;
-      color: #666;
-    }
-
-    .footer-links{
-      display:flex;
-      justify-content:center;
-      gap: 14px;
-      flex-wrap: wrap;
-      margin-top: 8px;
-    }
-
-    .footer-links a{
-      color: #666;
-      text-decoration: none;
-      border-bottom: 1px solid rgba(102,102,102,.35);
-    }
-    .footer-links a:hover{
-      border-bottom-color: rgba(102,102,102,.8);
-    }
-  </style>
 </head>
 
 <body>
@@ -206,21 +50,50 @@
         </a>
       </nav>
 
-      <section id="about">
-        <h2>About</h2>
-        <p>
-          Three Gypsies Publishing releases books and music with a simple aim: make work that holds up when the noise dies down.
-        </p>
-        <p>
-          We publish selectively, favoring clarity, craft, and emotional honesty over volume.
-        </p>
+<section id="about" class="about">
+  <h2>About</h2>
 
-        <!-- Optional: add one more short paragraph later with your “why” -->
-        <p class="fineprint">
-          For inquiries, collaborations, or events, email <a href="mailto:info@threegypsiespublishing.com">info@threegypsiespublishing.com</a>.
-        </p>
-      </section>
+  <div class="about-grid">
+    <!-- Book image -->
+    <figure class="about-image book">
+      <img src="DBT_Cover.png" alt="Cover of Don’t Borrow Trouble" />
+      <figcaption>
+        <em>Don’t Borrow Trouble</em>
+      </figcaption>
+    </figure>
 
+    <!-- Text -->
+    <div class="about-text">
+      <p>
+        Three Gypsies Publishing began with a single book.
+      </p>
+
+      <p>
+        <em>Don’t Borrow Trouble</em> was written slowly, in the midst of ordinary responsibilities—parenthood, work, grief, music, and the daily effort to stay present without borrowing worry from a future that had not yet arrived. The book did not fit neatly into an existing category, and it did not want to be rushed or reshaped to meet someone else’s expectations.
+      </p>
+
+      <p>
+        Rather than force it into a system that didn’t quite fit, Three Gypsies Publishing was created to give the book a proper home.
+      </p>
+
+      <p>
+        The press exists to publish work like <em>Don’t Borrow Trouble</em>: writing and music that emerge from lived experience, take their time, and resist being simplified for the sake of convenience or trend. The goal is not scale, but accuracy—finding the right form, pacing, and presentation for each project.
+      </p>
+
+      <p>
+        Three Gypsies Publishing is small by design. It publishes selectively and works closely with each release, treating the act of publishing as an extension of the work itself rather than a separate, industrial process.
+      </p>
+
+      <p class="about-contact">
+        For inquiries, collaborations, or events, please contact<br />
+        <a href="mailto:info@threegypsiespublishing.com">info@threegypsiespublishing.com</a>
+      </p>
+    </div>
+
+    <!-- Author image -->
+   
+  </div>
+</section>
       <footer>
         © <span id="year"></span> Three Gypsies Publishing
         <div class="footer-links">
