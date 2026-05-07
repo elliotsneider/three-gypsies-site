@@ -1,0 +1,375 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Merciful TRVLR | Don’t Borrow Trouble</title>
+  <style>
+    :root {
+      --bg: #f5f1e8;
+      --ink: #171412;
+      --muted: #6f675f;
+      --accent: #b97a2b;
+      --card: #fffaf1;
+      --line: #d9cdbb;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      font-family: Courier, sans-serif;
+      background: var(--bg);
+      color: var(--ink);
+      line-height: 1.6;
+    }
+
+    .page {
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 32px 20px 64px;
+    }
+
+    header {
+      border-bottom: 1px solid var(--line);
+      padding-bottom: 28px;
+      margin-bottom: 36px;
+    }
+
+    .eyebrow {
+      font-family: Courier, sans-serif;
+      text-transform: uppercase;
+      letter-spacing: 0.15em;
+      font-size: 0.78rem;
+      color: var(--accent);
+      margin-bottom: 12px;
+      font-weight: bold;
+    }
+
+    h1 {
+        font-family: 'IBM Plex Mono', monospace;
+
+  font-weight: normal;
+font-size: clamp(2.8rem, 7vw, 6rem);
+      line-height: 0.95;
+      margin: 0 0 16px;
+      letter-spacing: -0.05em;
+    }
+
+    h2 {
+      font-family: 'IBM Plex Mono', monospace;
+font-size: clamp(1.7rem, 4vw, 3rem);
+      line-height: 1.05;
+      margin: 0 0 18px;
+      letter-spacing: -0.03em;
+    }
+
+    h3 {
+      font-family: 'IBM Plex Mono', monospace;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      font-size: 0.95rem;
+      margin-top: 0;
+      color: var(--accent);
+    }
+
+    .subtitle {
+      font-size: 1.3rem;
+      color: var(--muted);
+      max-width: 760px;
+      margin: 0;
+    }
+
+    .hero-grid {
+      display: grid;
+      grid-template-columns: 1.2fr 0.8fr;
+      gap: 32px;
+      align-items: start;
+      margin-bottom: 42px;
+    }
+
+    .hero-image {
+      width: 100%;
+      border-radius: 18px;
+      border: 1px solid var(--line);
+      display: block;
+      background: #ddd;
+    }
+
+    .image-note {
+      font-family: Courier, sans-serif;
+      font-size: 0.85rem;
+      color: var(--muted);
+      margin-top: 8px;
+    }
+
+    .card {
+      background: var(--card);
+      border: 1px solid var(--line);
+      border-radius: 18px;
+      padding: 24px;
+      box-shadow: 0 8px 24px rgba(0,0,0,0.04);
+    }
+
+    .highlight {
+      font-family: Courier, sans-serif;
+      font-weight: bold;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      font-size: 0.9rem;
+      color: var(--accent);
+      margin-bottom: 8px;
+    }
+
+    .big-line {
+      font-size: 1.45rem;
+      line-height: 1.3;
+      margin: 0;
+    }
+
+    section {
+      margin: 42px 0;
+    }
+
+    .two-column {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 28px;
+    }
+
+    .video-wrapper {
+      position: relative;
+      width: 100%;
+      padding-top: 56.25%;
+      border-radius: 18px;
+      overflow: hidden;
+      border: 1px solid var(--line);
+      background: #000;
+    }
+
+    .video-wrapper iframe {
+      position: absolute;
+      inset: 0;
+      width: 100%;
+      height: 100%;
+      border: 0;
+    }
+
+    .band-list {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      font-size: 1.1rem;
+    }
+
+    .band-list li {
+      padding: 8px 0;
+      border-bottom: 1px solid var(--line);
+    }
+
+    .band-list li:last-child {
+      border-bottom: 0;
+    }
+
+    .cta-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+      margin-top: 22px;
+    }
+
+    .button {
+      display: inline-block;
+      padding: 12px 18px;
+      border-radius: 999px;
+      font-family: Courier, sans-serif;
+      font-size: 0.95rem;
+      font-weight: bold;
+      text-decoration: none;
+      color: var(--bg);
+      background: var(--ink);
+    }
+
+    .button.secondary {
+      color: var(--ink);
+      background: transparent;
+      border: 1px solid var(--ink);
+    }
+
+
+
+    .logo-mark {
+	position: absolute;
+  top: 24px;
+  left: 24px;
+  max-width: 140px;
+  width: 100%;
+  height: auto;
+  display: block;
+
+}
+
+    .band-logo-small {
+      max-width: 160px;
+      width: 100%;
+      height: auto;
+      display: block;
+      margin: 0 0 18px;
+    }
+
+    .release-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 28px;
+    }
+
+    .release-card img {
+      width: 100%;
+      border-radius: 14px;
+      border: 1px solid var(--line);
+      display: block;
+      margin-bottom: 18px;
+      background: #ddd;
+    }
+
+    .release-card h3 {
+      margin-bottom: 8px;
+    }
+
+    .release-card p {
+      margin-top: 0;
+    }
+
+    footer {
+      border-top: 1px solid var(--line);
+      margin-top: 48px;
+      padding-top: 24px;
+      font-family: Courier, sans-serif;
+      color: var(--muted);
+      font-size: 0.95rem;
+    }
+
+    footer a {
+      color: var(--ink);
+    }
+
+    @media (max-width: 800px) {
+      .hero-grid,
+      .two-column,
+      .release-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .page {
+        padding-top: 22px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <main class="page">
+    <header>
+      <img class="logo-mark" src="mt_music_img/merciful-trvlr-logo.png" alt="Merciful TRVLR logo" />
+      <div class="eyebrow">Electronic Press Kit</div>
+      <h1>Merciful<br> TRVLR</h1>
+      <p class="subtitle">A musical project by Elliot Sneider blending jazz, improvisation, songwriting, and storytelling.</p>
+    </header>
+
+    <section class="hero-grid">
+      <div>
+        <!-- Replace band-photo.jpg with your actual image file name or URL -->
+        <img class="hero-image" src="mt_music_img/MT_Band_DBTRelease.png" alt="Merciful TRVLR performing live" />
+        <p class="image-note">Photo: Merciful TRVLR live at PAUSA Art House, Buffalo.</p>
+      </div>
+
+      <aside class="card">
+        <div class="highlight">Recent Highlight</div>
+        <p class="big-line">Merciful TRVLR recently completed a sold-out performance at PAUSA Art House in Buffalo, presenting an evening of music and storytelling centered on resilience, reflection, healing, and human connection.</p>
+        <div class="cta-row">
+          <a class="button" href="https://youtu.be/ImE8EL6710U" target="_blank" rel="noopener">Watch Live Video</a>
+          <a class="button secondary" href="mailto:info@threegypsiespublishing.com">Contact</a>
+        </div>
+      </aside>
+    </section>
+
+    <section>
+      <h2>Don’t Borrow Trouble</h2>
+      <p><em>Don’t Borrow Trouble</em> is a concert experience created for spaces where reflection, compassion, and human connection matter deeply. Combining original music, storytelling, and readings from his companion book, pianist and author Elliot Sneider explores themes of grief, resilience, caregiving, uncertainty, hope, and the challenge of remaining present during difficult moments.</p>
+      <p>The performance was shaped in part by Sneider’s experience losing his wife to cancer and rebuilding life afterward as a father, artist, and human being. Rather than focusing only on loss, the evening creates space for humor, honesty, memory, healing, and shared humanity. Audiences frequently describe the performances as intimate, calming, emotionally resonant, and deeply connective.</p>
+      <p>The program is especially well suited for arts series, synagogues, community organizations, cancer support centers, hospitals, wellness initiatives, literary programs, and spaces interested in thoughtful programming around healing and the human experience.</p>
+      <p>Featuring live music from the album, readings from the book, and spontaneous interaction between musicians and audience, each performance moves fluidly between concert, conversation, and communal experience. The music was recorded in Nashville in 2023 and released under Sneider’s project, Merciful TRVLR.</p>
+    </section>
+
+
+
+    <section>
+      <h2>Book &amp; Album</h2>
+      <div class="release-grid">
+        <div class="card release-card">
+          <img src="books_img/dbt-book-cover.jpg" alt="Don’t Borrow Trouble book cover" />
+          <h3>Don’t Borrow Trouble — Book</h3>
+          <p>A written companion to the performance, exploring grief, memory, resilience, and the human tendency to worry about tomorrow instead of living in today.</p>
+          <a class="button" href="BOOK_BUY_LINK" target="_blank" rel="noopener">Buy the Book</a>
+        </div>
+
+        <div class="card release-card">
+          <img src="mt_music_img/dbt-album-cover.png" alt="Don’t Borrow Trouble album cover" />
+          <h3>Don’t Borrow Trouble — Album</h3>
+          <p>The companion album, recorded in Nashville in 2023 and released under Elliot Sneider’s musical project, Merciful TRVLR.</p>
+          <a class="button" href="ALBUM_BUY_LINK" target="_blank" rel="noopener">Buy the Album</a>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <h2>Live Video</h2>
+      <div class="video-wrapper">
+        <iframe src="https://www.youtube.com/embed/ImE8EL6710U" title="Merciful TRVLR live video" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+      </div>
+    </section>
+
+    <section class="two-column">
+      <div class="card">
+        <h3>Merciful TRVLR</h3>
+        <img class="band-logo-small" src="mt_music_img/merciful-trvlr-logo.png" alt="Merciful TRVLR logo" />
+        <p>Merciful TRVLR is a musical project by Elliot Sneider blending jazz, improvisation, songwriting, and storytelling into a deeply human and collaborative experience. Rooted in the belief that no performance is ever truly solo, the project invites audiences into an atmosphere of listening, vulnerability, reflection, and connection.</p>
+        <p>Performances are designed not simply as entertainment, but as shared experiences that allow space for emotion, memory, healing, and community. Drawing from jazz, American song, literary storytelling, and spontaneous improvisation, Merciful TRVLR creates performances that are intimate, exploratory, and quietly hopeful.</p>
+      </div>
+
+      <div class="card">
+        <h3>Merciful TRVLR Collective</h3>
+        <ul class="band-list">
+          <li><strong>Elliot Sneider</strong> — piano, vocals, storytelling</li>
+        </ul>
+
+        <p style="margin-top:18px;"><strong>Featuring a rotating collective of musicians including:</strong></p>
+
+        <ul class="band-list">
+          <li><strong>Colin Brydalski</strong> — bass</li>
+          <li><strong>Abdul-Rahman Qadir</strong> — drums</li>
+          <li>additional collaborators on bass, drums, strings, horns, voice, and improvisation</li>
+        </ul>
+
+        <p style="margin-top:18px; color: var(--muted); font-size:0.95rem;">
+          Merciful TRVLR is designed as an evolving musical community, allowing each performance to adapt organically to the musicians, venue, and audience present in the room.
+        </p>
+      </div>
+    </section>
+
+    <section>
+      <h2>About Elliot Sneider</h2>
+      <p>Elliot Sneider is a pianist, composer, writer, and improviser whose work blends jazz tradition with personal storytelling. Following the loss of his wife to cancer, Sneider began creating performances that explored grief, resilience, caregiving, uncertainty, and the search for meaning through music, writing, and human connection.</p>
+      <p>He has performed with a wide range of Buffalo artists including Vanessa Vacanti, My Cousin Tone, and his own project, Merciful TRVLR. Sneider performs regularly both nationally and internationally with Michael Arenella’s Dreamland Orchestra, and has toured his solo show <em>My Brother George</em>, exploring the music of George Gershwin.</p>
+      <p>His performances emphasize deep listening, spontaneity, warmth, and the belief that music can help create spaces where people feel seen, connected, and less alone.</p>
+    </section>
+
+    <footer>
+      <strong>Booking / Contact:</strong> Elliot Sneider · <a href="tel:19173344254">(917) 334-4254</a><br />
+      <!-- Replace with your preferred email or booking link -->
+      <a href="mailto:info@threegypsiespublishing.com">info@threegypsiespublishing.com</a>
+    </footer>
+  </main>
+</body>
+</html>
