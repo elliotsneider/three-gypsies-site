@@ -33,8 +33,9 @@
     }
 
     header {
+      Position: relative;
       border-bottom: 1px solid var(--line);
-      padding-bottom: 28px;
+      padding: 120px 0 28px;
       margin-bottom: 36px;
     }
 
@@ -203,7 +204,7 @@ font-size: clamp(1.7rem, 4vw, 3rem);
     .logo-mark {
 	position: absolute;
   top: 24px;
-  left: 24px;
+  left: 0;
   max-width: 140px;
   width: 100%;
   height: auto;
@@ -256,7 +257,10 @@ font-size: clamp(1.7rem, 4vw, 3rem);
     }
 
     @media (max-width: 800px) {
-      .hero-grid,
+      .logo-mark {
+	max-width: 110px;
+top: 18px;
+}.hero-grid,
       .two-column,
       .release-grid {
         grid-template-columns: 1fr;
