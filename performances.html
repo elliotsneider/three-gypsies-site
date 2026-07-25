@@ -113,37 +113,10 @@
       font-weight: normal;
     }
 
-    .event-location {
-      margin-bottom: 16px;
-      font-size: 1.04rem;
-      line-height: 1.55;
-    }
-
     .event-description {
       margin: 0 0 22px;
       color: #514d47;
       line-height: 1.65;
-    }
-
-    .ticket-button {
-      display: inline-block;
-      padding: 11px 20px;
-      background: #252525;
-      color: #fff;
-      border: 1px solid #252525;
-      border-radius: 3px;
-      font-family: Arial, sans-serif;
-      font-size: 0.82rem;
-      font-weight: bold;
-      letter-spacing: 0.08em;
-      text-decoration: none;
-      text-transform: uppercase;
-      transition: 0.2s ease;
-    }
-
-    .ticket-button:hover {
-      background: transparent;
-      color: #252525;
     }
 
     .status-message {
@@ -217,6 +190,7 @@
       <div class="status-message">Loading upcoming events…</div>
     </section>
   </main>
+
 <script>
   const sheetUrl =
     "https://docs.google.com/spreadsheets/d/e/2PACX-1vQ_-ESKAvK6rvOcWOpMbg_sWKpDBO4XswJF0a8EsV49TqD3oKlD81Jge57Ubmqz4CLuXajGvjkkp-mc/pub?gid=0&single=true&output=csv";
@@ -249,9 +223,14 @@
 
       const date = new Date(year, month, day);
 
-      if (!Number.isNaN(date.getTime())) {
-        return date;
-      }
+if (
+  !Number.isNaN(date.getTime()) &&
+  date.getFullYear() === year &&
+  date.getMonth() === month &&
+  date.getDate() === day
+) {
+  return date;
+}
     }
 
     /*
